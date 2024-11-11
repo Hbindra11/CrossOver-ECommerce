@@ -8,19 +8,10 @@ function SignUpPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:5000/api/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    })
-      .then(response => {
-        if (response.ok) {
-          navigate('/signin');
-        } else {
-          console.error('Sign up failed.');
-        }
-      })
-      .catch(error => console.error('Error signing up:', error));
+   
+    console.log('Form Data:', formData);
+  
+    navigate('/signin');
   };
 
   // Google, Facebook, and Apple sign-up buttons
