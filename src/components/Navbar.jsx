@@ -8,7 +8,7 @@ const Navbar = () => {
         {/* <Link to="/" className="text-black text-lg font-bold no-underline"> */}
           FakeStore
         {/* </Link> */}
-        <div className="container mx-auto flex justify-end items-cente flex space-x-4">
+        <div className="container mx-auto justify-end items-cente flex space-x-4">
           <Link to="/" className="text-black hover:text-gray-200">
             Home
           </Link>
