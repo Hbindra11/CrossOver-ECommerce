@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { StoreContext } from "../context/contextApi";
+import logo from "../assets/logo/logo.png";
 
 const Navbar = () => {
   const { state } = useContext(StoreContext);
@@ -10,7 +11,7 @@ const Navbar = () => {
       <div className="container mx-auto flex  items-center">
         {/* The Link component takes care of updating the history in the browser */}
         {/* <Link to="/" className="text-black text-lg font-bold no-underline"> */}
-        FakeStore
+        <img src={logo} alt="logo" className="w-32 h-32" />
         {/* </Link> */}
         <div className="container mx-auto justify-end items-center flex space-x-4">
           <Link to="/" className="text-black hover:text-gray-200">
@@ -22,9 +23,7 @@ const Navbar = () => {
           <Link to="/SignIn " className="text-black hover:text-gray-200">
             SignIn
           </Link>
-          <Link to="/SignUp" className="text-black hover:text-gray-200">
-            SignUp
-          </Link>
+         
         </div>
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
