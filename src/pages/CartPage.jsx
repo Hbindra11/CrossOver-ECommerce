@@ -14,7 +14,8 @@ const CartPage = () => {
         dispatch({ type: "cartTotal", payload: total });
     }, [cart]);
     const handleRemove = (id) => {
-        dispatch({ type: "remove", payload: id });
+        const updatedCart = cart.filter(item => item.id !== id);
+        dispatch({ type: "cart", payload: updatedCart });
     };
 
       // Function to increment the quantity of a product in the cart
