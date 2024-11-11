@@ -9,8 +9,8 @@ import Layout from "./components/Layout";
 import Home from "./components/Home";
 import ProductList from "./ProductPage/ProductList";
 import CartPage from "./pages/CartPage";
-import SignInPage from "./pages/SignInPage";
-import SignUpPage from "./pages/SignInPage";
+import SignInPage from './pages/SignInPage';
+
 
 function App() {
   const router = createBrowserRouter(
@@ -19,17 +19,15 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/signin" element={<SignInPage />} />
+        <Route path="/signin" element={<SignInPage />} /> 
       </Route>
     )
   );
+
   return (
-    <>
-      <StoreProvider>
-        <RouterProvider router={router} />
-      </StoreProvider>
-    </>
+    <StoreProvider>
+      <RouterProvider router={router} />
+    </StoreProvider>
   );
 }
 
