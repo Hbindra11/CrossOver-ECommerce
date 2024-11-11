@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
+
     <nav className="bg-base-100 p-4 ">
       <div className="container mx-auto flex  items-center">
         {/* The Link component takes care of updating the history in the browser */}
@@ -50,7 +51,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </nav>  
+
   );
 };
 export default Navbar;
