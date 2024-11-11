@@ -16,8 +16,8 @@ export default defineConfig({
         mytheme: {
           primary: "#B08463",
           secondary: "#B9937B",
-          accent: "#D0B9A7",
-          neutral: "#CA7D94", // check this before presentation
+          accent: "#714329",
+          neutral: "#D0B9A7", // check this before presentation
           "base-100": "#B5A192", 
         },
       },
