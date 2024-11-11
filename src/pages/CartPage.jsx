@@ -13,40 +13,27 @@ const CartPage = () => {
         dispatch({ type: "cartTax", payload: tax });
         dispatch({ type: "cartTotal", payload: total });
     }, [cart]);
-    const handleIncrement = (id) => {
-        dispatch({ type: "cart", payload: id });
-    };
-
-    const handleDecrement = (id) => {
-        dispatch({ type: "decrement", payload: id });
-    };
     const handleRemove = (id) => {
         dispatch({ type: "remove", payload: id });
     };
-    useEffect(() => {
-        dispatch({ type: "cart", payload: [
-            {
-                id: 1,
-                title: "Product 1",
-                price: 10,
-                description: "This is a product description",
-                category: "Category 1",
-                image: "https://via.placeholder.com/150",
-                rating: { rate: 4, count: 10 },
-                quantity: 1,
-            },
-            {
-                id: 2,
-                title: "Product 2",
-                price: 20,
-                description: "This is a product description",
-                category: "Category 2",
-                image: "https://via.placeholder.com/150",
-                rating: { rate: 3, count: 10 },
-                quantity: 1,
-            },
-        ] });
-    }, []);
+
+      // Function to increment the quantity of a product in the cart
+  const handleIncrement = (productId) => {
+    const updatedCart = cart.map((item) =>
+      item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    dispatch({ type: "cart", payload: updatedCart });
+  };
+
+  // Function to decrement the quantity of a product in the cart
+  const handleDecrement = (productId) => {
+    const updatedCart = cart.map((item) =>
+      item.id === productId && item.quantity > 1
+        ? { ...item, quantity: item.quantity - 1 }
+        : item
+    );
+    dispatch({ type: "cart", payload: updatedCart });
+  };
 
     return (
         <div className="container mx-auto p-4">
