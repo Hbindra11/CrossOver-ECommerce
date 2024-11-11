@@ -7,7 +7,7 @@ function SignInPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData); // Temporary action for form submission
+    console.log('Form submitted:', formData); 
   };
 
   return (
