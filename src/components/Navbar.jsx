@@ -23,9 +23,7 @@ const Navbar = () => {
           <Link to="/SignIn " className="text-black hover:text-gray-200">
             SignIn
           </Link>
-          <Link to="/SignUp" className="text-black hover:text-gray-200">
-            SignUp
-          </Link>
+         
         </div>
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
