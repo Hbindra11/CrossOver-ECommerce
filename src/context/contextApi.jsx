@@ -42,7 +42,7 @@ const storeReducer = (state, action) => {
 
 export const StoreContext = createContext();
 
-const StoreProvider = ({children}) => {
+export const StoreProvider = ({children}) => {
     const [state, dispatch] = useReducer(storeReducer, initailState);
 
     return (
