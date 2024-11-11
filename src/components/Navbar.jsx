@@ -6,11 +6,14 @@ const Navbar = () => {
       <div className="container mx-auto flex  items-center">
         {/* The Link component takes care of updating the history in the browser */}
         {/* <Link to="/" className="text-black text-lg font-bold no-underline"> */}
-          FakeStore
+        FakeStore
         {/* </Link> */}
         <div className="container mx-auto justify-end items-cente flex space-x-4">
           <Link to="/" className="text-black hover:text-gray-200">
             Home
+          </Link>
+          <Link to="/products" className="text-black hover:text-gray-200">
+            Products
           </Link>
         </div>
         <div className="dropdown dropdown-end">
